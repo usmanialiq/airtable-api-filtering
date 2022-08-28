@@ -3,7 +3,8 @@ import { FETCH_CLASSES } from '../types';
 import { IClass, IStudent } from './../../interfaces';
 import { Dispatch } from 'redux';
 
-const baseUrl = (type: string): string => `https://api.airtable.com/v0/app8ZbcPx7dkpOnP0/${type}?api_key=keyhnw7TsKdnOcTUL`;
+const API_KEY = process.env.REACT_APP_API_KEY;
+const baseUrl = (type: string): string => `https://api.airtable.com/v0/app8ZbcPx7dkpOnP0/${type}?api_key=${API_KEY}`;
 
 /*
     -> Sequence of execution:
